@@ -33,7 +33,7 @@ function SkillTest() {
         <div className="flex flex-col gap-6 lg:w-3/5">
           <div className="flex flex-col lg:flex-row items-center gap-4 border rounded-xl p-4 w-full">
             <Image src={htmlImage} width={80} height={20} alt="image here" />
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 text-center lg:text-left">
               <p className="font-bold">Hyper Text Markup Language</p>
               <p className="">
                 Questions: 08 | Duration: 15 mins | Submitted on 5 June 2021
