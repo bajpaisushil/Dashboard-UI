@@ -1,11 +1,12 @@
-import Sidebar from "@/components/Sidebar/Sidebar";
-import Image from "next/image";
+import { redirect } from "next/navigation";
+
 
 export default function Home() {
+  redirect("/skill-test");
   return (
     <div className="">
       <div className="flex h-screen">
-        
+
       </div>
     </div>
   );

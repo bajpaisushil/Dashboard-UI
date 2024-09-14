@@ -27,9 +27,9 @@ function SkillTest() {
   ];
 
   return (
-    <div className="p-2 px-12 text-xl">
+    <div className="p-2 px-12 text-lg overflow-auto h-screen">
       <p className="text-gray-500 my-6">Skill Test</p>
-      <div className="flex flex-col lg:flex-row gap-8">
+      <div className="flex flex-col lg:flex-row lg:gap-8 gap-4">
         <div className="flex flex-col gap-6 lg:w-3/5">
           <div className="flex items-center gap-4 border rounded-xl p-4">
             <Image src={htmlImage} width={80} height={20} alt="image here" />
