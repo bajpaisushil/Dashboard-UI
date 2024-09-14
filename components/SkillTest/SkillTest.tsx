@@ -27,11 +27,11 @@ function SkillTest() {
   ];
 
   return (
-    <div className="p-2 px-12 text-lg overflow-auto h-screen">
+    <div className="p-2 lg:px-12 px-6 text-lg h-screen w-full overflow-auto">
       <p className="text-gray-500 my-6">Skill Test</p>
       <div className="flex flex-col lg:flex-row lg:gap-8 gap-4">
         <div className="flex flex-col gap-6 lg:w-3/5">
-          <div className="flex items-center gap-4 border rounded-xl p-4">
+          <div className="flex flex-col lg:flex-row items-center gap-4 border rounded-xl p-4 w-full">
             <Image src={htmlImage} width={80} height={20} alt="image here" />
             <div className="flex flex-col gap-2">
               <p className="font-bold">Hyper Text Markup Language</p>
@@ -43,7 +43,7 @@ function SkillTest() {
           </div>
           <div className="flex flex-col border rounded-xl p-4">
             <p className="font-bold">Quick Statistics</p>
-            <div className="flex gap-4 p-4">
+            <div className="flex flex-col lg:flex-row gap-4 p-4">
               <div className="flex gap-2 border-r w-fit p-2 px-4">
                 <div className="mr-2 bg-gray-200 rounded-full items-center flex p-4">
                   <Trophy size={30} />

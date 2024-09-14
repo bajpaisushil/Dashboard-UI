@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   ResizableHandle,
   ResizablePanelGroup,
@@ -7,19 +7,20 @@ import {
 import Sidebar from "../Sidebar/Sidebar";
 
 
-function ResizableComp({children}: any) {
+function ResizableComp({ children }: any) {
+
   return (
-    <div>
+    <div className="h-full overflow-auto">
       <ResizablePanelGroup
         direction="horizontal"
         className="rounded-lg border"
       >
-        <ResizablePanel defaultSize={20}>
+        <ResizablePanel defaultSize={30} maxSize={50}>
           <Sidebar />
         </ResizablePanel>
         <ResizableHandle />
-        <ResizablePanel defaultSize={80}>
-            {children}
+        <ResizablePanel defaultSize={70}>
+          {children}
         </ResizablePanel>
       </ResizablePanelGroup>
     </div>
