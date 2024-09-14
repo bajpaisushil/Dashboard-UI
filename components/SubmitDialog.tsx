@@ -17,12 +17,26 @@ import { useState } from "react";
 export function SubmitDialog() {
   const [open, setOpen]=useState(false);
   const { rank, percentile, score, setRank, setPercentile, setScore } = useStatsStore();
+  const [statsData, setStatsData]=useState({
+    rank: rank,
+    percentile: percentile,
+    score: score,
+  })
+  
   const handleScore=(e: any)=>{
     e.preventDefault();
     if(e.target.value>15){
       return alert("Score must be greater than 15.");
     }
-    setScore(e.target.value);
+    setStatsData({...statsData, score: e.target.value});
+  }
+
+  const handleSave=(e: any)=>{
+    e.preventDefault();
+    setRank(statsData.rank);
+    setPercentile(statsData.percentile);
+    setScore(statsData.score);
+    setOpen(false);
   }
 
   return (
@@ -44,8 +58,8 @@ export function SubmitDialog() {
             </Label>
             <Input
               id="rank"
-              value={rank}
-              onChange={(e) => setRank(e.target.value)}
+              value={statsData.rank}
+              onChange={(e) => setStatsData({...statsData, rank: e.target.value})}
               className="w-[10rem]"
             />
           </div>
@@ -55,8 +69,8 @@ export function SubmitDialog() {
             </Label>
             <Input
               id="percentile"
-              value={percentile}
-              onChange={(e) => setPercentile(e.target.value)}
+              value={statsData.percentile}
+              onChange={(e) => setStatsData({...statsData, percentile: e.target.value})}
               className="w-[10rem]"
             />
           </div>
@@ -66,14 +80,15 @@ export function SubmitDialog() {
             </Label>
             <Input
               id="score"
-              value={score}
+              value={statsData.score}
               onChange={handleScore}
               className="w-[10rem]"
             />
           </div>
         </div>
         <DialogFooter>
-          <Button type="submit" onClick={()=> setOpen(false)}>Save changes</Button>
+        <Button type="submit" onClick={()=> setOpen(false)}>Cancel</Button>
+          <Button type="submit" onClick={handleSave}>Save changes</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
