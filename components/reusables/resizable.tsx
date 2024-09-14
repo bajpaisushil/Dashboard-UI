@@ -15,11 +15,11 @@ function ResizableComp({ children }: any) {
         direction="horizontal"
         className="rounded-lg border"
       >
-        <ResizablePanel defaultSize={30} maxSize={50}>
+        <ResizablePanel defaultSize={25} maxSize={40}>
           <Sidebar />
         </ResizablePanel>
         <ResizableHandle />
-        <ResizablePanel defaultSize={70}>
+        <ResizablePanel defaultSize={75}>
           {children}
         </ResizablePanel>
       </ResizablePanelGroup>

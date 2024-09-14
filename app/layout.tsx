@@ -30,7 +30,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="flex h-screen overflow-hidden">
+        <div className="">
           <ResizableComp>{children}</ResizableComp>
         </div>
       </body>
