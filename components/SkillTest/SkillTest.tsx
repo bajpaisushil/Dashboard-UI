@@ -69,7 +69,7 @@ function SkillTest() {
                   <CheckIcon size={25} />
                 </div>
                 <div className="flex flex-col justify-end gap-1">
-                  <p className="font-bold">{rank} / 15</p>
+                  <p className="font-bold">{score} / 15</p>
                   <p className="text-gray-500 text-sm">CORRECT ANSWERS</p>
                 </div>
               </div>
